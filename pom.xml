@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.hatem.example</groupId>
-    <artifactId>jspexample</artifactId>
+    <artifactId>jsptest</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
     <properties>
