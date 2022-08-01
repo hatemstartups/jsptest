@@ -1,0 +1,17 @@
+---
+- name: Ansible Copy Example Local to Remote
+  hosts: tomcatserver
+  tasks:
+    - name: copying file with playbook
+      become: true 
+      copy:
+        src: /var/lib/jenkins/workspace/maventest/target/jsptest-1.0.war
+        dest: /opt/tomcat/webapps/
+        owner: tomcat
+        group: tomcat        
+        mode: 0644
+    - name: Run a script to restart tomcat
+      become: true 
+      shell: "nohup sudo /opt/tomcat/bin/startup.sh restart"
+      ignore_errors: yes
+
